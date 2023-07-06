@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Button from './Button'
-import {Modal} from './Modal'
+import Modal from './Modal';
 import { server_calls } from '../api/server';
 import { DataGrid, GridColDef } from '@mui/x-data-grid';
 import { useGetData } from '../custom-hooks/FetchData';
@@ -37,7 +37,7 @@ function DataTable() {
     return (
     <>
         <Modal
-        id={selectionModel}
+            id={selectionModel}
             open={open}
             onClose={handleClose}
         />

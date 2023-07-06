@@ -36,3 +36,5 @@ export const Modal = ( props: Props ) => {
         </div>
     )
 }
+
+export default Modal
