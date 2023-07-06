@@ -1,3 +1,4 @@
+//token for frog
 const token = 'c77a0bd59b1c467466f1e175b87c0f3862322a03ac260ed9'
 
 export const server_calls = {
