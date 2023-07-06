@@ -1,5 +1,4 @@
-//token for frog
-const token = 'c77a0bd59b1c467466f1e175b87c0f3862322a03ac260ed9'
+const token = '8bb344d4cdc46b854093105d8afb6d9d2f4fdf57ec3c8e07'
 
 export const server_calls = {
     get: async () => { 
