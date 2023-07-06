@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    font-family: Bungee;
+    src: url(https://fonts.google.com/specimen/Bungee)
+}
+
