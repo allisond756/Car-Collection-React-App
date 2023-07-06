@@ -24,7 +24,7 @@ const ContactForm = (props:ContactFormProps) => {
     if (props.id && props.id.length > 0) {
       server_calls.update(props.id[0], data)
       console.log(`Updated: ${ data.name } ${ props.id }`);
-      setTimeout ( () => {window.location.reload ()}, 1000);
+      setTimeout ( () => {window.location.reload ()}, 500);
       event.target.reset();
     } else {
       dispatch(chooseName(data.name));
@@ -33,7 +33,7 @@ const ContactForm = (props:ContactFormProps) => {
       dispatch(chooseYear(data.year));
 
       server_calls.create(store.getState());
-      setTimeout( () => {window.location.reload()}, 1000)
+      setTimeout( () => {window.location.reload()}, 500)
       event.target.reset();
 
       props.onClose();
@@ -63,10 +63,9 @@ const ContactForm = (props:ContactFormProps) => {
         </div>
         <div className="flex p-1">
           <Button 
-          className='flex justify-center ms-auto w-full mt-3 bg-amber-300 text-orange-600 p-2 
-          rounded hover:bg-orange-400 hover:text-yellow-300 border border-orange-600'
-          >
-            Submit
+            className='flex justify-center ms-auto w-full mt-3 bg-amber-300 text-orange-600 p-2 rounded hover:bg-orange-400 hover:text-yellow-300 border border-orange-600'
+            >
+              Submit
           </Button>
         </div>
       </form>
