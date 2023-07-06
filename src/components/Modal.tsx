@@ -29,7 +29,7 @@ export const Modal = ( props: Props ) => {
                         </p>
                     </div>
                     <div className='flex flex-col items-center text-center m-3 p-2'>
-                        <ContactForm id={ props.id } />
+                        <ContactForm id={ props.id } onClose={props.onClose}/>
                     </div>
                 </div>
             </div>

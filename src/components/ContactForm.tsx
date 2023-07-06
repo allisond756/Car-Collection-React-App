@@ -8,6 +8,7 @@ import { chooseName, chooseCarModel, chooseMake, chooseYear } from "../redux/sli
 
 interface ContactFormProps {
   id?: string[]
+  onClose: () => void;
 }
 
 const ContactForm = (props:ContactFormProps) => {
@@ -16,7 +17,10 @@ const ContactForm = (props:ContactFormProps) => {
   const store = useStore();
 
   const onSubmit = (data: any, event: any) => {
-    console.log(`ID: ${props.id}`);
+    console.log(`ID: ${typeof props.id}`);
+    console.log(props.id);
+    console.log(data);
+    
     if (props.id && props.id.length > 0) {
       server_calls.update(props.id[0], data)
       console.log(`Updated: ${ data.name } ${ props.id }`);
@@ -30,6 +34,9 @@ const ContactForm = (props:ContactFormProps) => {
 
       server_calls.create(store.getState());
       setTimeout( () => {window.location.reload()}, 1000)
+      event.target.reset();
+
+      props.onClose();
     }
     
   }
